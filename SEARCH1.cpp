@@ -7,7 +7,7 @@ main()
 //la declaration des variables
 
 int arr[50];
-int j,x,n,i;
+int j,x,n,i,choice;
 
 printf("taper la dimension du tableau:");
 scanf("%d",&x);
@@ -50,7 +50,11 @@ while(ech>0);
 for(j=0;j<x;j++)
 		printf("%7d",arr[j]);
 	printf("\n");
+	printf ("What do you want ?\n");
+printf ("1= Binary search\n2=Linear Search\n");
+scanf ("%d", &choice);
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
+	if (choice==1){
 //Binary Search
     printf("Taper le nomber que vous chercher : ");
     scanf("%d",&n);
@@ -71,8 +75,9 @@ for(j=0;j<x;j++)
             printf("l'element %d existe est sont index %d utilisation de (Binary Search)\n",n,mid);
             break;
         }
-    }
+    }}
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
+	if (choice==2){
 ////Linear Search
     int indice;
     bool b=false;
@@ -97,4 +102,4 @@ for(j=0;j<x;j++)
 	    printf("l'element %d n'existe pas ",n);
     
 	getch();
-}  
+}  }
